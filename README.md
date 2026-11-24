@@ -41,6 +41,13 @@ BiocManager::install(c("DESeq2", "clusterProfiler", "org.Hs.eg.db",
 ## Data availability
 The raw and processed GeoMx data are not included in this repository (human patient data). 
 
+## Notes on the script
+`DNA_repair_analysis.R` is an exploratory analysis script. Several gene lists
+and sections were run in parallel sessions, and only this script is reported
+here. Some objects and input files referenced in it (e.g. gene list files,
+`dds_tme`, `old_mig`) are therefore not defined in the script or not included
+in this repository, and some sections cannot be run as provided. The script is
+shared for transparency of the analysis used for spatial transcriptomic data analysis focusing DNA repair genes.
 
 ## License
 MIT.
