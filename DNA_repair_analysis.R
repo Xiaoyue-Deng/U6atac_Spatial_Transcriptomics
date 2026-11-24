@@ -136,7 +136,8 @@ pca_plot <- plotPCA(dds_vst, intgroup = "U6ATAC_RNAscopeClass", returnData = FAL
 #pca_plot <- plotPCA(dds_counts, intgroup = "U6ATAC_RNAscopeClass", returnData = FALSE)
 print(pca_plot)
 # slice conditions of interest
-dds_tumour<- results(dds, contrast=c("U6ATAC_RNAscopeClass", "high","low"))
+# Important note: text coordinates were adjusted manually for figure layout
+dds_tumour<- results(dds, contrast=c("U6ATAC_RNAscopeClass", "high","low")) 
 #dds_tme <- results(dds, contrast=c("condition", "high_TME", "low_TME"))
 #dds_tme<- results(dds, contrast=c("U6ATAC_RNAscopeClass", "high","low"))
 dds_tumour[rownames(dds_tumour)=="TP53",]
@@ -333,6 +334,8 @@ volcano_plot1 <- ggplot(results_df, aes(x = log2FoldChange, y = negLog10Pvalue))
   labs(title = paste(tag, "high vs low U6atac, DNA repair genes"), x = "Log2 Fold Change", y = "-Log10 p-value", color = "Gene Group") +
   geom_hline(yintercept = -log10(0.05), linetype = "dashed", color = "blue") +
   geom_vline(xintercept = 0, linetype = "dotted") +
+  # Note: Text coordinates (x/hjust) were manually adjusted for figure layout; 
+  # positive log2FoldChange represents higher expression in High U6atac.
   annotate("text", x = -max(results_df$log2FoldChange) * 0.1, y = max(results_df$negLog10Pvalue)*1.1, label = "High U6atac", hjust = -3, vjust = 4) +
   annotate("text", x = max(results_df$log2FoldChange) * 0.1, y = max(results_df$negLog10Pvalue)*1.1, label = "Low U6atac", hjust = 3, vjust = 4) +
   theme(axis.line = element_line(color='white'), panel.background = element_rect(fill = "white"),
