@@ -4,13 +4,6 @@ _"Inhibiting Minor Intron Splicing Disrupts DNA Repair and Sensitizes Hormone-Dr
 Prostate Cancer"_.
 
 ---
-## Workflow
-1. `support_scripts/` – upstream processing of the GeoMx dataset
-   (normalization comparison, spatial deconvolution, etc).
-2. `DNA_repair_analysis.R` – differential expression and volcano plot
-   used for the manuscript.
-
----
 
 ## 📦 Requirements
 
