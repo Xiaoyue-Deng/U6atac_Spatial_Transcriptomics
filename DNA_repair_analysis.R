@@ -1,7 +1,6 @@
 #===============================================================
 # Title: Spatial Transcriptomics Analysis from Nanostring GeoMx DSP data
 # Author: Xiaoyue Deng, Mansour Faye, Anke Augspach (Corresponding Author)
-# Contact: xiaoyue.deng@students.unibe.ch, anke.augspach@unibe.ch
 # Date: 2024-09-12
 # License: MIT
 #===============================================================
