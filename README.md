@@ -21,13 +21,14 @@ Prostate Cancer"_.
   - pheatmap
   - ggrepel
   - sessioninfo
+  - msigdbr
 
 To install missing packages:
 
 ```r
 install.packages(c("tidyverse", "readxl", "openxlsx", "ggrepel"))
 BiocManager::install(c("DESeq2", "clusterProfiler", "org.Hs.eg.db",
-                       "enrichplot", "EnhancedVolcano", "pheatmap"))
+                       "enrichplot", "EnhancedVolcano", "pheatmap","msigdbr"))
 
 ```
 
