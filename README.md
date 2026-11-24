@@ -43,5 +43,10 @@ here. Some objects and input files referenced in it (e.g. gene list files,
 in this repository, and some sections cannot be run as provided. The script is
 shared for transparency of the analysis used for spatial transcriptomic data analysis focusing DNA repair genes.
 
+## Repository Contents
+* `DNA_repair_analysis.R` – Core R script for differential expression analysis (DESeq2), gene set enrichment analysis (GSEA), and volcano plot generation presented in the manuscript.
+
+*(Note: Upstream preprocessing scripts used during exploratory analysis are omitted for clarity; all filtering thresholds and parameters applied to the processed count matrix are documented directly within `DNA_repair_analysis.R`.)*
+
 ## License
 MIT.
